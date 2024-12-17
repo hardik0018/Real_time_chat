@@ -63,7 +63,7 @@ export const useMessageStore = create((set, get) => ({
   },
   unsuscribeFromMessage: () => {
     const socket = useAuthStore.getState().socket;
-
+    if (!socket) return;
     socket.off("newMessage");
   },
 }));

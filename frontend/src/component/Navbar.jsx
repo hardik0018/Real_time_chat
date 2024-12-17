@@ -1,11 +1,14 @@
-import { useAuthStore } from '../store/useAuthStore'
+import { useAuthStore } from "../store/useAuthStore";
 
-const Navbar=()=>{
-  const {logout} =useAuthStore()
-  return <div>
-    <button onClick={logout} className="btn btn-warning">Logout</button>
+const Navbar = () => {
+  const { logout } = useAuthStore();
+  return (
+    <div className="sticky w-full bg-black z-40 top-0 h-14 ">
+      <button onClick={logout} className="btn btn-warning">
+        Logout
+      </button>
+    </div>
+  );
+};
 
-  </div>
-}
-
-export default Navbar
+export default Navbar;
